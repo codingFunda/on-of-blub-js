@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crude website by apna college</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .center {
+            margin-top: 10%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            margin-top: 0;
+            background-color: #fff;
+            color: red;
+            width: 15%;
+            height: 5vh;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" id="img" src="download.png" width="200px">
+    <button class="btn center" id="btn">Turn On</button>
+
+    <script>
+        let blub = document.getElementById("img");
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", img);
+
+        function img() {
+            if (btn.textContent.includes("On")) {
+                blub.src = "download (1).png";
+                btn.textContent = "Turn Off";
+            } else {
+                blub.src = "download.png";
+                btn.textContent = "Turn On";
+            }
+        }
+    </script>
+</body>
+</html>
+
